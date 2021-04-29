@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-md-12">
                         <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <h3 class="register-heading">TEST*1 Connect Google Spreadsheet to HTML</h3>
+                            <h3 class="register-heading">TEST*2 Connect Google Spreadsheet to HTML</h3>
                             <div class="row register-form">
                                 <div class="col-md-12">
                                     <form method="post" autocomplete="off" id="google-sheet" name="google-sheet">
@@ -98,7 +98,7 @@ function initializeLiff(myLiffId) {
         	     liff.getProfile().then(function(profile) {
             const uid = profile.userId;
             const uname = profile.displayName;
-            document.getElementsByName("Uid").value = "Johnny Bravo";
+            document.getElementsByName("Uid")[0].value = "hhhhh";
         })
         })
         .catch((err) => {
