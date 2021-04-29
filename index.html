@@ -110,12 +110,12 @@ function getid(){
 }
 
 
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxCduvLRIsEIjBSePXx4dlZNam93Hng1BD4rTnB3ur55UTJFD0o6wbgkrGdHz2e00jI/exec'
+            const scriptURL = 'http://script.google.com/macros/s/AKfycbxCduvLRIsEIjBSePXx4dlZNam93Hng1BD4rTnB3ur55UTJFD0o6wbgkrGdHz2e00jI/exec'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
               e.preventDefault()
-              fetch(scriptURL, { headers: {  'Access-Control-Allow-Origin': 'https://script.google.com' }, method: 'POST', body: new FormData(form)})
+              fetch(scriptURL, { headers: {  'Access-Control-Allow-Origin': 'http://script.google.com/' }, method: 'POST', body: new FormData(form)})
                 .then(response => document.getElementById("google-sheet").reset())
                 .catch(error => console.error('Error!', error.message))
             })
