@@ -98,7 +98,7 @@ function initializeLiff(myLiffId) {
         	     liff.getProfile().then(function(profile) {
             const uid = profile.userId;
             const uname = profile.displayName;
-             document.getElementById("Uid").value = "Johnny Bravo";
+            document.getElementsByName("Uid").value = "Johnny Bravo";
         })
         })
         .catch((err) => {
