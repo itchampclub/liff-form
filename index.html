@@ -115,7 +115,7 @@ function getid(){
           
             form.addEventListener('submit', e => {
               e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              fetch(scriptURL, { headers: {  'Access-Control-Allow-Origin': 'https://script.google.com' }, method: 'POST', body: new FormData(form)})
                 .then(response => document.getElementById("google-sheet").reset())
                 .catch(error => console.error('Error!', error.message))
             })
