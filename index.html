@@ -58,12 +58,12 @@
             <div class="row">
                 <div class="col-md-12">
                         <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <h3 class="register-heading">TEST*3 Connect Google Spreadsheet to HTML</h3>
+                            <h3 class="register-heading">Connect Google Spreadsheet to HTML</h3>
                             <div class="row register-form">
                                 <div class="col-md-12">
                                     <form method="post" autocomplete="off" id="google-sheet" name="google-sheet">
                                     	<div class="form-group">
-                                            <input type="text" name="Uid" class="form-control" placeholder="Your Uid *" value="" required=""/>
+                                            <input type="hidden" name="Uid" class="form-control" placeholder="Your Uid *" value="" required=""/>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" name="Name" class="form-control" placeholder="Your Name *" value="" required=""/>
@@ -105,6 +105,7 @@ function getid(){
             const uid = profile.userId;
             const uname = profile.displayName;
             document.getElementsByName("Uid")[0].value = uid;
+            document.getElementsByName("Name")[0].value = uname;
         });
 }
 
